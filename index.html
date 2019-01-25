@@ -8,7 +8,8 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style>
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -25,35 +26,145 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-center">
+  <script type="text/javascript">
+    function openWindowEmail(){
+      window.open('mailto:pedro.oct.costa@gmail.com');
+    }
+    function topFunction() {
+      event.preventDefault();
+      document.querySelector('.projects').scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+      } else {
+        document.getElementById("myBtn").style.display = "none";
+      }
+    }
+    
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
         <h3 class="masthead-brand">Welcome to my page</h3>
         <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link"  href="#projects">projects</a>
+          <a class="nav-link" href="#education">Educations</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main role="main" class="inner cover">
-      <h1 class="cover-heading">Pedro Oct. Costa.</h1>
+      <h1 id="summary" class="cover-heading"style="margin-top:30%">Pedro Oct. Costa</h1>
       <p class="lead">
         HI ! i'm a computer engineering - mobile computing master student , and here you can learn more about me.
         I graduate university in 2018 and i been coding since my 16, i'm 22 by the way :)
         I love linux , low level programming and hardware ! if you keep scrolling you can learn even more !!!
       </p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+        Also i love clean and straigth to the point websites.
       </p>
-    </main>
-
-    <footer class="mastfoot mt-auto">
-      <div class="inner">
-        <p>Copyright@2019</p>
-      </div>
-    </footer>
-  </div>
-</body>
-</html>
+      <h2 id="projects" class="cover-heading" style="margin-top:10%"><b>Projects</b></h2>
+      <div class="card-deck">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">Final Degree Project</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Application Develop in php and javascript </h6>
+            <p class="card-text">The project was built from the ground up and was a platform that allow professor to manage their schedule with PHD and MS students</p>
+            <a href="https://github.com/pedrooct/Agenda-ProjectManager" class="card-link">Check out github</a>
+          </div>
+        </div>
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h5 class="card-title">gitNotify</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Application develop in python</h6>
+            <p class="card-text">This application provides a good way to follow the latest push on a branch in github, in linux notifies the user
+              of an update to the github repository he wishes.</p>
+              <a href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck" style="margin-top:10%">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 class="card-title">Domino find all sequences with threads</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Application Develop in C </h6>
+              <p class="card-text">This projects consists on dividing the job of finding domino sequences with multiples threadsusing recursion and clever algorithms. </p>
+              <a href="https://github.com/pedrooct/find_dominoes_sequences_w-thread-processes" class="card-link">Check out github</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 class="card-title">CabacBinarization process</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Application Develop javascript </h6>
+              <p class="card-text">This project tries to explain the Cabac Binarization process and the algorithms it uses in a simple way.</p>
+              <a href="https://github.com/pedrooct/CabacBinarization" class="card-link">Check out github</a>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:10%">
+          <p class="lead">
+            <a href="https://github.com/pedrooct" class="btn btn-lg btn-secondary">Check my others projects</a>
+          </p>
+        </div>
+        <h2 id="education" class="cover-heading" style="margin-top:10%"><b>Education</b></h2>
+        <div class="container">
+          <div class="page-header">
+            <h3 id="timeline">Timeline</h3>
+          </div>
+          <ul class="timeline">
+            <li class="timeline-inverted">
+              <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">2018/2019 master student in mobile computing</h4>
+                </div>
+                <div class="timeline-body">
+                  <a href="https://www.ufp.pt/inicio/estudar-e-investigar/mestrados/engenharia-informatica/" class="card-link">Check sylabus</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">2018 Degree in computer engineering</h4>
+                </div>
+                <div class="timeline-body">
+                  <p>From 2015 to 2018</p>
+                  <a href="https://www.ufp.pt/inicio/estudar-e-investigar/licenciaturas/engenharia-informatica/" class="card-link">Check sylabus</a>
+                </div>
+              </div>
+            </li>
+            <li class="timeline-inverted">
+              <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">2014/2015 CET in network management and computer systems</h4>
+                </div>
+                <div class="timeline-body">
+                  <p>This was a one year course to expand my knowledge before going to university</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <h2 id="contact" class="cover-heading" style="margin-top:10%"><b>Contact me</b></h2>
+        <p class="lead">
+          <button onclick="openWindowEmail()" class="btn btn-lg btn-secondary">Send me a email</button>
+        </p>
+      </main>
+    </div>
+  </body>
+  </html>
