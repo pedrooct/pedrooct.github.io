@@ -8,6 +8,7 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <style>
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -24,7 +25,165 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-center">
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Welcome to my page</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link"  href="#projects">projects</a>
+          <a class="nav-link" href="#education">Educations</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main" class="inner cover">
+      <h1 id="summary" class="cover-heading"style="margin-top:30%">Pedro Oct. Costa</h1>
+      <p class="lead">
+        HI ! i'm a computer engineering - mobile computing master student , and here you can learn more about me.
+        I graduate university in 2018 and i been coding since my 16, i'm 22 by the way :)
+        I love linux , low level programming and hardware ! if you keep scrolling you can learn even more !!!
+      </p>
+      <p class="lead">
+        Also i love clean and straigth to the point websites.
+      </p>
+      <h2 id="projects" class="cover-heading" style="margin-top:10%"><b>Projects</b></h2>
+      <div id="loader" class="loader"></div>
+      <div id="card">
+        <div class="card-deck">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 id="title0" class="card-title"></h5>
+              <h6 id="subtitle0"class="card-subtitle mb-2 text-muted"></h6>
+              <p id="text0" class="card-text"></p>
+              <a id="link0" href="https://github.com/pedrooct/Agenda-ProjectManager" class="card-link">Check out github</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 id="title1" class="card-title"></h5>
+              <h6 id="subtitle1" class="card-subtitle mb-2 text-muted"></h6>
+              <p id="text1" class="card-text"></p>
+              <a id="link1" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck" style="margin-top:10%">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 id="title2" class="card-title"></h5>
+              <h6 id="subtitle2" class="card-subtitle mb-2 text-muted"></h6>
+              <p id="text2" class="card-text"></p>
+              <a id="link2" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h5 id="title3" class="card-title"></h5>
+              <h6 id="subtitle3" class="card-subtitle mb-2 text-muted"></h6>
+              <p id="text3" class="card-text"></p>
+              <a id="link3" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10%">
+        <p class="lead">
+          <a href="https://github.com/pedrooct" class="btn btn-lg btn-secondary">Check my others projects</a>
+        </p>
+      </div>
+      <h2 id="education" class="cover-heading" style="margin-top:10%"><b>Education</b></h2>
+      <div class="container">
+        <div class="page-header">
+          <h3 id="timeline">Timeline</h3>
+        </div>
+        <ul class="timeline">
+          <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">2018/2019 master student in mobile computing</h4>
+              </div>
+              <div class="timeline-body">
+                <a href="https://www.ufp.pt/inicio/estudar-e-investigar/mestrados/engenharia-informatica/" class="card-link">Check sylabus</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">2018 Degree in computer engineering</h4>
+              </div>
+              <div class="timeline-body">
+                <p>From 2015 to 2018</p>
+                <a href="https://www.ufp.pt/inicio/estudar-e-investigar/licenciaturas/engenharia-informatica/" class="card-link">Check sylabus</a>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">Internship Android developer</h4>
+              </div>
+              <div class="timeline-body">
+                <p>2016 - i was a android developer , worked with java mysql , php and osm map.
+                  This projects consisted of a geo locator to allow law enforcement to map streets or zones where crime to be more active.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">2014/2015 CET in network management and computer systems</h4>
+              </div>
+              <div class="timeline-body">
+                <p>This was a one year course to expand my knowledge before going to university</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <h2 id="contact" class="cover-heading" style="margin-top:10%"><b>Contact me</b></h2>
+      <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="subject" placeholder="Subject" style="margin-top:3%">
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="bodyMsg" placeholder="Body of the message" style="margin-top:3%" rows="3"></textarea>
+        </div>
+        <p class="lead" style="margin-top:5%">
+          <button type="button" onclick="openWindowEmail()" class="btn btn-lg btn-secondary">Send me a email</button>
+        </p>
+      </form>
+    </main>
+  </div>
   <script type="text/javascript">
+  function listProjects(){
+    var link = "https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner";
+    axios.get(link)
+    .then(function (response) {
+      document.getElementById('card').style.visibility="hidden";
+      document.getElementById('loader').style.display="block";
+      for (let i =0; i<4 ;i++){
+        document.getElementById("title"+i).innerHTML=response.data[i].name;
+        document.getElementById("subtitle"+i).innerHTML="Application built in "+response.data[i].language;
+        document.getElementById("text"+i).innerHTML=response.data[i].description;
+        document.getElementById("link"+i).setAttribute("href",response.data[i].html_url);
+      }
+      document.getElementById('loader').style.display="none";
+      document.getElementById('card').style.visibility="visible";
+
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   function openWindowEmail(){
     var mailto='mailto:pedro.oct.costa@gmail.com';
     var sub = document.getElementById("subject").value;
@@ -53,129 +212,7 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+  listProjects();
   </script>
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand">Welcome to my page</h3>
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#home">Home</a>
-          <a class="nav-link"  href="#projects">projects</a>
-          <a class="nav-link" href="#education">Educations</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
-
-    <main role="main" class="inner cover">
-      <h1 id="summary" class="cover-heading"style="margin-top:30%">Pedro Oct. Costa</h1>
-      <p class="lead">
-        HI ! i'm a computer engineering - mobile computing master student , and here you can learn more about me.
-        I graduate university in 2018 and i been coding since my 16, i'm 22 by the way :)
-        I love linux , low level programming and hardware ! if you keep scrolling you can learn even more !!!
-      </p>
-      <p class="lead">
-        Also i love clean and straigth to the point websites.
-      </p>
-      <h2 id="projects" class="cover-heading" style="margin-top:10%"><b>Projects</b></h2>
-      <div class="card-deck">
-        <div class="card" style="width: 20rem;">
-          <div class="card-body">
-            <h5 class="card-title">Final Degree Project</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Application Develop in php and javascript </h6>
-            <p class="card-text">The project was built from the ground up and was a platform that allow professor to manage their schedule with PHD and MS students</p>
-            <a href="https://github.com/pedrooct/Agenda-ProjectManager" class="card-link">Check out github</a>
-          </div>
-        </div>
-        <div class="card" style="width: 20rem;">
-          <div class="card-body">
-            <h5 class="card-title">gitNotify</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Application develop in python</h6>
-            <p class="card-text">This application provides a good way to follow the latest push on a branch in github, in linux notifies the user
-              of an update to the github repository he wishes.</p>
-              <a href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-deck" style="margin-top:10%">
-          <div class="card" style="width: 20rem;">
-            <div class="card-body">
-              <h5 class="card-title">Domino find all sequences with threads</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Application Develop in C </h6>
-              <p class="card-text">This projects consists on dividing the job of finding domino sequences with multiples threadsusing recursion and clever algorithms. </p>
-              <a href="https://github.com/pedrooct/find_dominoes_sequences_w-thread-processes" class="card-link">Check out github</a>
-            </div>
-          </div>
-          <div class="card" style="width: 20rem;">
-            <div class="card-body">
-              <h5 class="card-title">CabacBinarization process</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Application Develop javascript </h6>
-              <p class="card-text">This project tries to explain the Cabac Binarization process and the algorithms it uses in a simple way.</p>
-              <a href="https://github.com/pedrooct/CabacBinarization" class="card-link">Check out github</a>
-            </div>
-          </div>
-        </div>
-        <div style="margin-top:10%">
-          <p class="lead">
-            <a href="https://github.com/pedrooct" class="btn btn-lg btn-secondary">Check my others projects</a>
-          </p>
-        </div>
-        <h2 id="education" class="cover-heading" style="margin-top:10%"><b>Education</b></h2>
-        <div class="container">
-          <div class="page-header">
-            <h3 id="timeline">Timeline</h3>
-          </div>
-          <ul class="timeline">
-            <li class="timeline-inverted">
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">2018/2019 master student in mobile computing</h4>
-                </div>
-                <div class="timeline-body">
-                  <a href="https://www.ufp.pt/inicio/estudar-e-investigar/mestrados/engenharia-informatica/" class="card-link">Check sylabus</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">2018 Degree in computer engineering</h4>
-                </div>
-                <div class="timeline-body">
-                  <p>From 2015 to 2018</p>
-                  <a href="https://www.ufp.pt/inicio/estudar-e-investigar/licenciaturas/engenharia-informatica/" class="card-link">Check sylabus</a>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">2014/2015 CET in network management and computer systems</h4>
-                </div>
-                <div class="timeline-body">
-                  <p>This was a one year course to expand my knowledge before going to university</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <h2 id="contact" class="cover-heading" style="margin-top:10%"><b>Contact me</b></h2>
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" id="subject" placeholder="Subject" style="margin-top:3%">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" id="bodyMsg" placeholder="Body of the message" style="margin-top:3%" rows="3"></textarea>
-          </div>
-          <p class="lead" style="margin-top:5%">
-            <button type="button" onclick="openWindowEmail()" class="btn btn-lg btn-secondary">Send me a email</button>
-          </p>
-        </form>
-      </main>
-    </div>
-  </body>
-  </html>
+</body>
+</html>
