@@ -63,7 +63,7 @@
         <div class="card-deck">
           <div class="card" style="width: 20rem;">
             <div class="card-body">
-              <h5 id="title0" class="card-title"></h5>
+              <h4 id="title0" class="card-title"></h4>
               <h6 id="subtitle0"class="card-subtitle mb-2 text-muted"></h6>
               <p id="text0" class="card-text"></p>
               <a id="link0" href="https://github.com/pedrooct/Agenda-ProjectManager" class="card-link">Check out github</a>
@@ -71,7 +71,7 @@
           </div>
           <div class="card" style="width: 20rem;">
             <div class="card-body">
-              <h5 id="title1" class="card-title"></h5>
+              <h4 id="title1" class="card-title"></h4>
               <h6 id="subtitle1" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text1" class="card-text"></p>
               <a id="link1" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
@@ -81,7 +81,7 @@
         <div class="card-deck" style="margin-top:10%">
           <div class="card" style="width: 20rem;">
             <div class="card-body">
-              <h5 id="title2" class="card-title"></h5>
+              <h4 id="title2" class="card-title"></h4>
               <h6 id="subtitle2" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text2" class="card-text"></p>
               <a id="link2" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
@@ -89,10 +89,28 @@
           </div>
           <div class="card" style="width: 20rem;">
             <div class="card-body">
-              <h5 id="title3" class="card-title"></h5>
+              <h4 id="title3" class="card-title"></h4>
               <h6 id="subtitle3" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text3" class="card-text"></p>
               <a id="link3" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck" style="margin-top:10%">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h4 id="title4" class="card-title"></h4>
+              <h6 id="subtitle4" class="card-subtitle mb-2 text-muted"></h6>
+              <p id="text4" class="card-text"></p>
+              <a id="link4" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h4 id="title5" class="card-title"></h4>
+              <h6 id="subtitle5" class="card-subtitle mb-2 text-muted"></h6>
+              <p id="text5" class="card-text"></p>
+              <a id="link5" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
             </div>
           </div>
         </div>
@@ -194,7 +212,7 @@
     var link = "https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner";
     axios.get(link)
     .then(function (response) {
-      for (let i =0; i<4 ;i++){
+      for (let i =0; i<6 ;i++){
         document.getElementById("title"+i).innerHTML=response.data[i].name;
         document.getElementById("subtitle"+i).innerHTML="Application built in "+response.data[i].language;
         document.getElementById("text"+i).innerHTML=response.data[i].description;
