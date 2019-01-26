@@ -11,59 +11,50 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-    }
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+  }
 
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
     }
+  }
   </style>
   <!-- Custom styles for this template -->
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-center">
   <script type="text/javascript">
-    function openWindowEmail(){
-      var mailto='mailto:pedro.oct.costa@gmail.com';
-      var email = document.getElementById("email").value;
-      var sub = document.getElementById("subject").value;
-      var body = document.getElementById("bodyMsg").value;
-      if(email && sub && body)
-      {
-        sub =sub.replace(" ", "%20");
-        body= body.replace(" ","%20");
-        sub = email+"-"+sub;
-        console.log(mailto+"?subject="+sub+"&body="+body);
-        window.open(mailto+"?subject="+sub+"&body="+body);
-      }
-      else {
-        window.open(mailto);
-      }  
+  function openWindowEmail(){
+    var mailto='mailto:pedro.oct.costa@gmail.com';
+    var sub = document.getElementById("subject").value;
+    var body = document.getElementById("bodyMsg").value;
+    if(sub && body)
+    {
+      sub =sub.replace(" ", "%20");
+      body= body.replace(" ","%20");
+      console.log(mailto+"?subject="+sub+"&body="+body);
+      window.open(mailto+"?subject="+sub+"&body="+body);
     }
-    function topFunction() {
-      event.preventDefault();
-      document.querySelector('.projects').scrollIntoView({
-        behavior: 'smooth'
-      });
+    else {
+      window.open(mailto);
     }
-    window.onscroll = function() {scrollFunction()};
+  }
+  window.onscroll = function() {scrollFunction()};
 
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-      } else {
-        document.getElementById("myBtn").style.display = "none";
-      }
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("myBtn").style.display = "block";
+    } else {
+      document.getElementById("myBtn").style.display = "none";
     }
-
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   </script>
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -176,9 +167,6 @@
         </div>
         <h2 id="contact" class="cover-heading" style="margin-top:10%"><b>Contact me</b></h2>
         <form>
-          <div class="form-group">
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="email">
-          </div>
           <div class="form-group">
             <input type="text" class="form-control" id="subject" placeholder="Subject" style="margin-top:3%">
           </div>
