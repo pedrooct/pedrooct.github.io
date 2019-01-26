@@ -40,7 +40,11 @@
     </header>
 
     <main role="main" class="inner cover">
-      <h1 id="summary" class="cover-heading"style="margin-top:30%">Pedro Oct. Costa</h1>
+      <div style="margin-top:10%" class="text-center">
+        <div id="loaderImg" class="loaderImg"></div>
+        <img id="profile" src=""style="border-radius: 50%;" width="200px" height="200px">
+      </div>
+      <h1 id="summary" class="cover-heading"style="margin-top:10%">Pedro Oct. Costa</h1>
       <p class="lead">
         HI ! i'm a computer engineering - mobile computing master student , and here you can learn more about me.
         I graduate university in 2018 and i been coding since my 16, i'm 22 by the way :)
@@ -49,6 +53,10 @@
       <p class="lead">
         Also i love clean and straigth to the point websites.
       </p>
+      <h2>Favorite languages</h2>
+      <p class="lead"> C, rust , golang , python, php </p>
+      <h2>Favorite Subject</h2>
+      <p class="lead"> Computer Networks , mobile networks , IOT </p>
       <h2 id="projects" class="cover-heading" style="margin-top:10%"><b>Projects</b></h2>
       <div id="loader" class="loader"></div>
       <div id="card">
@@ -164,12 +172,28 @@
     </main>
   </div>
   <script type="text/javascript">
+  function getImage(){
+    var link = "https://api.github.com/users/pedrooct";
+    document.getElementById('profile').style.visibility="hidden";
+    document.getElementById('loaderImg').style.display="block";
+    axios.get(link)
+    .then(function (response) {
+      console.log(response.data);
+      document.getElementById("profile").src = response.data.avatar_url;
+      document.getElementById('loaderImg').style.display="none";
+      document.getElementById('profile').style.visibility="visible";
+
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   function listProjects(){
+    document.getElementById('card').style.visibility="hidden";
+    document.getElementById('loader').style.display="block";
     var link = "https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner";
     axios.get(link)
     .then(function (response) {
-      document.getElementById('card').style.visibility="hidden";
-      document.getElementById('loader').style.display="block";
       for (let i =0; i<4 ;i++){
         document.getElementById("title"+i).innerHTML=response.data[i].name;
         document.getElementById("subtitle"+i).innerHTML="Application built in "+response.data[i].language;
@@ -213,6 +237,7 @@
     document.documentElement.scrollTop = 0;
   }
   listProjects();
+  getImage();
   </script>
 </body>
 </html>
