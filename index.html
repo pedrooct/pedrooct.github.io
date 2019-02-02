@@ -66,7 +66,7 @@
               <h4 id="title0" class="card-title"></h4>
               <h6 id="subtitle0"class="card-subtitle mb-2 text-muted"></h6>
               <p id="text0" class="card-text"></p>
-              <a id="link0" href="https://github.com/pedrooct/Agenda-ProjectManager" class="card-link">Check out github</a>
+              <a id="link0" href="" class="card-link">Check out github</a>
             </div>
           </div>
           <div class="card" style="width: 20rem;">
@@ -74,7 +74,7 @@
               <h4 id="title1" class="card-title"></h4>
               <h6 id="subtitle1" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text1" class="card-text"></p>
-              <a id="link1" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+              <a id="link1" href="" class="card-link"> Check out github</a>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
               <h4 id="title2" class="card-title"></h4>
               <h6 id="subtitle2" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text2" class="card-text"></p>
-              <a id="link2" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+              <a id="link2" href="" class="card-link"> Check out github</a>
             </div>
           </div>
           <div class="card" style="width: 20rem;">
@@ -92,7 +92,7 @@
               <h4 id="title3" class="card-title"></h4>
               <h6 id="subtitle3" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text3" class="card-text"></p>
-              <a id="link3" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+              <a id="link3" href="" class="card-link"> Check out github</a>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@
               <h4 id="title4" class="card-title"></h4>
               <h6 id="subtitle4" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text4" class="card-text"></p>
-              <a id="link4" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+              <a id="link4" href="" class="card-link"> Check out github</a>
             </div>
           </div>
           <div class="card" style="width: 20rem;">
@@ -110,7 +110,7 @@
               <h4 id="title5" class="card-title"></h4>
               <h6 id="subtitle5" class="card-subtitle mb-2 text-muted"></h6>
               <p id="text5" class="card-text"></p>
-              <a id="link5" href="https://github.com/pedrooct/gitNotify" class="card-link"> Check out github</a>
+              <a id="link5" href="" class="card-link"> Check out github</a>
             </div>
           </div>
         </div>
@@ -196,7 +196,6 @@
     document.getElementById('loaderImg').style.display="block";
     axios.get(link)
     .then(function (response) {
-      console.log(response.data);
       document.getElementById("profile").src = response.data.avatar_url;
       document.getElementById('loaderImg').style.display="none";
       document.getElementById('profile').style.visibility="visible";
@@ -234,7 +233,6 @@
     {
       sub =sub.replace(" ", "%20");
       body= body.replace(" ","%20");
-      console.log(mailto+"?subject="+sub+"&body="+body);
       window.open(mailto+"?subject="+sub+"&body="+body);
     }
     else {
