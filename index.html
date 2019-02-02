@@ -9,6 +9,7 @@
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style>
   .bd-placeholder-img {
     font-size: 1.125rem;
@@ -189,71 +190,77 @@
       </form>
     </main>
   </div>
-  <script type="text/javascript">
-  function getImage(){
-    var link = "https://api.github.com/users/pedrooct";
-    document.getElementById('profile').style.visibility="hidden";
-    document.getElementById('loaderImg').style.display="block";
-    axios.get(link)
-    .then(function (response) {
-      document.getElementById("profile").src = response.data.avatar_url;
-      document.getElementById('loaderImg').style.display="none";
-      document.getElementById('profile').style.visibility="visible";
+  <script>
+  $(document).ready(function(){
+    $('.timeline').slideDown(1000);
+    $('.lead').slideDown(1000);
+  });
+</script>
+<script type="text/javascript">
+function getImage(){
+  var link = "https://api.github.com/users/pedrooct";
+  document.getElementById('profile').style.visibility="hidden";
+  document.getElementById('loaderImg').style.display="block";
+  axios.get(link)
+  .then(function (response) {
+    document.getElementById("profile").src = response.data.avatar_url;
+    document.getElementById('loaderImg').style.display="none";
+    document.getElementById('profile').style.visibility="visible";
 
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
-  }
-  function listProjects(){
-    document.getElementById('card').style.visibility="hidden";
-    document.getElementById('loader').style.display="block";
-    var link = "https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner";
-    axios.get(link)
-    .then(function (response) {
-      for (let i =0; i<6 ;i++){
-        document.getElementById("title"+i).innerHTML=response.data[i].name;
-        document.getElementById("subtitle"+i).innerHTML="Application built in "+response.data[i].language;
-        document.getElementById("text"+i).innerHTML=response.data[i].description;
-        document.getElementById("link"+i).setAttribute("href",response.data[i].html_url);
-      }
-      document.getElementById('loader').style.display="none";
-      document.getElementById('card').style.visibility="visible";
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+function listProjects(){
+  document.getElementById('card').style.visibility="hidden";
+  document.getElementById('loader').style.display="block";
+  var link = "https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner";
+  axios.get(link)
+  .then(function (response) {
+    for (let i =0; i<6 ;i++){
+      document.getElementById("title"+i).innerHTML=response.data[i].name;
+      document.getElementById("subtitle"+i).innerHTML="Application built in "+response.data[i].language;
+      document.getElementById("text"+i).innerHTML=response.data[i].description;
+      document.getElementById("link"+i).setAttribute("href",response.data[i].html_url);
+    }
+    document.getElementById('loader').style.display="none";
+    document.getElementById('card').style.visibility="visible";
 
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+function openWindowEmail(){
+  var mailto='mailto:pedro.oct.costa@gmail.com';
+  var sub = document.getElementById("subject").value;
+  var body = document.getElementById("bodyMsg").value;
+  if(sub && body)
+  {
+    sub =sub.replace(" ", "%20");
+    body= body.replace(" ","%20");
+    window.open(mailto+"?subject="+sub+"&body="+body);
   }
-  function openWindowEmail(){
-    var mailto='mailto:pedro.oct.costa@gmail.com';
-    var sub = document.getElementById("subject").value;
-    var body = document.getElementById("bodyMsg").value;
-    if(sub && body)
-    {
-      sub =sub.replace(" ", "%20");
-      body= body.replace(" ","%20");
-      window.open(mailto+"?subject="+sub+"&body="+body);
-    }
-    else {
-      window.open(mailto);
-    }
+  else {
+    window.open(mailto);
   }
-  window.onscroll = function() {scrollFunction()};
+}
+window.onscroll = function() {scrollFunction()};
 
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      document.getElementById("myBtn").style.display = "block";
-    } else {
-      document.getElementById("myBtn").style.display = "none";
-    }
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
   }
-  function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-  listProjects();
-  getImage();
-  </script>
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+listProjects();
+getImage();
+</script>
 </body>
 </html>

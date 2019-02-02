@@ -1,4 +1,9 @@
 
+
+.lead{
+  display: none;
+}
+
 /*Loader*/
 .loader {
   position: absolute;
@@ -45,6 +50,7 @@
   list-style: none;
   padding: 20px 0 20px;
   position: relative;
+  display:none;
 }
 
 .timeline:before {
