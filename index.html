@@ -30,7 +30,7 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand">Welcome to my page</h3>
+        <h3 class="masthead-brand">Just because FUN !</h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#home">Home</a>
           <a class="nav-link"  href="#projects">projects</a>
@@ -42,8 +42,7 @@
 
     <main role="main" class="inner cover">
       <div style="margin-top:10%" class="text-center">
-        <div id="loaderImg" class="loaderImg"></div>
-        <img id="profile" src=""style="border-radius: 50%;" width="200px" height="200px">
+        <img id="profile" src=""style="border-radius: 50%; display: none;" width="200px" height="200px">
       </div>
       <h1 id="summary" class="cover-heading"style="margin-top:10%">Pedro Oct. Costa</h1>
       <p class="lead">
@@ -192,45 +191,35 @@
   </div>
   <script>
   $(document).ready(function(){
-    $('.timeline').slideDown(1000);
-    $('.lead').slideDown(1000);
+    $('.timeline').slideDown(4000);
+    $('.lead').slideDown(4000);
+    $('#profile').slideDown(1000);
   });
 </script>
 <script type="text/javascript">
 function getImage(){
-  var link = "https://api.github.com/users/pedrooct";
-  document.getElementById('profile').style.visibility="hidden";
-  document.getElementById('loaderImg').style.display="block";
-  axios.get(link)
-  .then(function (response) {
-    document.getElementById("profile").src = response.data.avatar_url;
-    document.getElementById('loaderImg').style.display="none";
-    document.getElementById('profile').style.visibility="visible";
-
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+  return axios.get("https://api.github.com/users/pedrooct");
 }
 function listProjects(){
+  return axios.get("https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner");
+}
+function presentGitInfo(){
   document.getElementById('card').style.visibility="hidden";
   document.getElementById('loader').style.display="block";
-  var link = "https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner";
-  axios.get(link)
-  .then(function (response) {
+  axios.all([getImage(), listProjects()])
+  .then(axios.spread(function (Img, projects) {
+    document.getElementById("profile").src = Img.data.avatar_url;
+    document.getElementById('profile').style.visibility="visible";
     for (let i =0; i<6 ;i++){
-      document.getElementById("title"+i).innerHTML=response.data[i].name;
-      document.getElementById("subtitle"+i).innerHTML="Application built in "+response.data[i].language;
-      document.getElementById("text"+i).innerHTML=response.data[i].description;
-      document.getElementById("link"+i).setAttribute("href",response.data[i].html_url);
+      document.getElementById("title"+i).innerHTML=projects.data[i].name;
+      document.getElementById("subtitle"+i).innerHTML="Application built in "+projects.data[i].language;
+      document.getElementById("text"+i).innerHTML=projects.data[i].description;
+      document.getElementById("link"+i).setAttribute("href",projects.data[i].html_url);
     }
     document.getElementById('loader').style.display="none";
     document.getElementById('card').style.visibility="visible";
-
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+    document.getElementById('profile').style.display="Inline";
+  }));
 }
 function openWindowEmail(){
   var mailto='mailto:pedro.oct.costa@gmail.com';
@@ -259,8 +248,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-listProjects();
-getImage();
+presentGitInfo();
 </script>
 </body>
 </html>
