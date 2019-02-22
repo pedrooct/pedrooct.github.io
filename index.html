@@ -30,7 +30,7 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand">Just because FUN !</h3>
+        <h3 class="masthead-brand">Just because FUN!</h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#home">Home</a>
           <a class="nav-link"  href="#projects">projects</a>
@@ -247,6 +247,17 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
 }
 presentGitInfo();
 </script>
