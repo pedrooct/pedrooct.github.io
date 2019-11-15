@@ -6,7 +6,6 @@
   <meta name="generator" content="Jekyll v3.8.5">
   <title>Welcome to my page</title>
 
-  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -22,7 +21,6 @@
     }
   }
   </style>
-  <!-- Custom styles for this template -->
   <link href="style.css" rel="stylesheet">
 </head>
 <body class="text-center">
@@ -30,7 +28,10 @@
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
-        <h3 class="masthead-brand">Just because FUN!</h3>
+        <h3 class="masthead-brand">
+          <a href="https://www.linkedin.com/in/pedro-oct-costa-3440ba186/">
+            <img border="0" alt="Linkedin" src="./img/LinkedIn-Icon-Dark.png" width="50" height="50">
+        </h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#home">Home</a>
           <a class="nav-link"  href="#projects">projects</a>
@@ -47,8 +48,8 @@
       <h1 id="summary" class="cover-heading"style="margin-top:10%">Pedro Oct. Costa</h1>
       <p class="lead">
         HI ! i'm a mobile computing master student , and here you can learn more about me.
-        I graduate university( computer engineering  ) in 2018 and i been coding since my 16, i'm 22 by the way :)
-        I love linux , low level programming and hardware ! if you keep scrolling you can learn even more !!!
+        I graduate university( computer engineering  ) in 2018 and i been coding since my 16, i'm 23 by the way :)
+        I love linux , low level programming, networks and hardware ! if you keep scrolling you can learn even more !!!
       </p>
       <p class="lead">
         Also i love clean and straigth to the point websites.
@@ -120,12 +121,23 @@
           <a href="https://github.com/pedrooct" class="btn btn-lg btn-secondary">Check my others projects</a>
         </p>
       </div>
-      <h2 id="education" class="cover-heading" style="margin-top:10%"><b>Education</b></h2>
+      <h2 id="education" class="cover-heading" style="margin-top:10%"><b>My History</b></h2>
       <div class="container">
         <div class="page-header">
           <h3 id="timeline">Timeline</h3>
         </div>
         <ul class="timeline">
+          <li>
+            <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title">2018/Present Hardlevel-Energias Renovaveis, LDA </h4>
+              </div>
+              <div class="timeline-body">
+                <p>IoT Researcher and engineer</p>
+              </div>
+            </div>
+          </li>
           <li class="timeline-inverted">
             <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
             <div class="timeline-panel">
@@ -178,10 +190,10 @@
       <h2 id="contact" class="cover-heading" style="margin-top:10%"><b>Contact me</b></h2>
       <form>
         <div class="form-group">
-          <input type="text" class="form-control" id="subject" placeholder="Subject" style="margin-top:3%">
+          <input type="text" class="form-control-css" id="subject" placeholder="Subject" style="margin-top:3%">
         </div>
         <div class="form-group">
-          <textarea class="form-control" id="bodyMsg" placeholder="Body of the message" style="margin-top:3%" rows="3"></textarea>
+          <textarea class="form-control-css" id="bodyMsg" placeholder="Body of the message" style="margin-top:3%" rows="3"></textarea>
         </div>
         <p class="lead" style="margin-top:5%">
           <button type="button" onclick="openWindowEmail()" class="btn btn-lg btn-secondary">Send me a email</button>
