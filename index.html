@@ -56,7 +56,7 @@
         Also i love clean and straight to the point websites.
 
 
-        PS: This site collects some information for analysis. 
+        PS: This site collects some information for analysis.
       </p>
       <h2>Favorite languages</h2>
       <p class="lead"> C, rust , golang , python, php </p>
@@ -219,8 +219,8 @@ function random(){
     aux=Math.floor(Math.random() * 100) + 1;
     key=key+ aux.toString();
   }
-  console.log(key)
-  return key
+  console.log(key);
+  return key;
 }
 function trackIO(){
   if (typeof(Storage) !== "undefined") {
@@ -228,7 +228,7 @@ function trackIO(){
       sessionStorage.setItem("id",random());
     }
     axios.post('http://pedrocosta.heliohost.org/trackGithubIO/trackIO.php', {
-      session_id: sessionStorage.getItem("id");
+      session_id: sessionStorage.getItem("id")
     })
   }
 }
