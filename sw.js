@@ -1,6 +1,5 @@
 var CACHE_NAME = 'pedrooctCache';
 var urlsToCache = [
-  '/',
   '/style.css'
 ];
 

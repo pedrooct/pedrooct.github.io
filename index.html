@@ -54,6 +54,9 @@
       </p>
       <p class="lead">
         Also i love clean and straight to the point websites.
+
+
+        PS: This site collects some information for analysis. 
       </p>
       <h2>Favorite languages</h2>
       <p class="lead"> C, rust , golang , python, php </p>
@@ -210,6 +213,25 @@
   });
 </script>
 <script type="text/javascript">
+function random(){
+  key="";
+  for (i=0;i< 20;i++){
+    aux=Math.floor(Math.random() * 100) + 1;
+    key=key+ aux.toString();
+  }
+  console.log(key)
+  return key
+}
+function trackIO(){
+  if (typeof(Storage) !== "undefined") {
+    if (sessionStorage.getItem("id") === null){
+      sessionStorage.setItem("id",random());
+    }
+    axios.post('http://pedrocosta.heliohost.org/trackGithubIO/trackIO.php', {
+      session_id: sessionStorage.getItem("id");
+    })
+  }
+}
 function getImage(){
   return axios.get("https://api.github.com/users/pedrooct");
 }
@@ -272,6 +294,7 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+trackIO();
 presentGitInfo();
 </script>
 </body>
