@@ -226,7 +226,7 @@ function trackIO(){
     if (sessionStorage.getItem("id") === null){
       sessionStorage.setItem("id",random());
     }
-    axios.post('https://pedrocosta.heliohost.org/trackGithubIO/trackIO.php', {
+    axios.post('https://trackio.000webhostapp.com/trackIO.php', {
       session_id: sessionStorage.getItem("id")
     })
   }
