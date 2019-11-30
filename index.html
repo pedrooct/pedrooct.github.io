@@ -30,8 +30,9 @@
     <header class="masthead mb-auto">
       <div class="inner">
         <h3 class="masthead-brand">
-          <a href="https://www.linkedin.com/in/pedro-oct-costa-3440ba186/">
+          <button onclick="trackIOlinkedinclick()" >
             <img border="0" alt="Linkedin" src="./img/LinkedIn-Icon-Dark.png" width="50" height="50">
+          </button>
         </h3>
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#home">Home</a>
@@ -122,7 +123,7 @@
       </div>
       <div style="margin-top:10%">
         <p class="lead">
-          <a href="https://github.com/pedrooct" class="btn btn-lg btn-secondary">Check my others projects</a>
+          <button onclick="trackIOprojectclick()" class="btn btn-lg btn-secondary">Check my others projects</button>
         </p>
       </div>
       <h2 id="education" class="cover-heading" style="margin-top:10%"><b>My History</b></h2>
@@ -213,6 +214,20 @@
   });
 </script>
 <script type="text/javascript">
+function trackIOlinkedinclick(){
+  if (sessionStorage.getItem("id") !== null){
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clicklinkedin=1', {
+    })
+  }
+  window.location.replace("https://www.linkedin.com/in/pedro-oct-costa-3440ba186/");
+}
+function trackIOprojectclick(){
+  if (sessionStorage.getItem("id") !== null){
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clickprojects=1', {
+    })
+  }
+  window.location.replace("https://github.com/pedrooct");
+}
 function random(){
   key="";
   for (i=0;i< 20;i++){
@@ -292,7 +307,7 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
-trackIO();
+//trackIO();
 presentGitInfo();
 </script>
 </body>
