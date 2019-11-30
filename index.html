@@ -219,14 +219,14 @@ function trackIOlinkedinclick(){
     axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clicklinkedin=1', {
     })
   }
-  window.location.replace("https://www.linkedin.com/in/pedro-oct-costa-3440ba186/");
+  window.location.href ="https://www.linkedin.com/in/pedro-oct-costa-3440ba186/";
 }
 function trackIOprojectclick(){
   if (sessionStorage.getItem("id") !== null){
     axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clickprojects=1', {
     })
   }
-  window.location.replace("https://github.com/pedrooct");
+  window.location.href = "https://github.com/pedrooct";
 }
 function random(){
   key="";
