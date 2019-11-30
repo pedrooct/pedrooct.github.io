@@ -273,6 +273,10 @@ function openWindowEmail(){
   var mailto='mailto:pedro.oct.costa@gmail.com';
   var sub = document.getElementById("subject").value;
   var body = document.getElementById("bodyMsg").value;
+  if (sessionStorage.getItem("id") !== null){
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clickemail=1', {
+    })
+  }
   if(sub && body)
   {
     sub =sub.replace(" ", "%20");
