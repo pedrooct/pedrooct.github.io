@@ -215,15 +215,15 @@
 </script>
 <script type="text/javascript">
 function trackIOlinkedinclick(){
-  if (sessionStorage.getItem("id") !== null){
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clicklinkedin=1', {
+  if (localStorage.getItem("id") !== null){
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id")+'&clicklinkedin=1', {
     })
   }
   window.open("https://www.linkedin.com/in/pedro-oct-costa-3440ba186/");
 }
 function trackIOprojectclick(){
-  if (sessionStorage.getItem("id") !== null){
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clickprojects=1', {
+  if (localStorage.getItem("id") !== null){
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id")+'&clickprojects=1', {
     })
   }
   window.open("https://github.com/pedrooct");
@@ -238,10 +238,10 @@ function random(){
 }
 function trackIO(){
   if (typeof(Storage) !== "undefined") {
-    if (sessionStorage.getItem("id") === null){
-      sessionStorage.setItem("id",random());
+    if (localStorage.getItem("id") === null){
+      localStorage.setItem("id",random());
     }
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id"), {
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id"), {
     })
   }
 }
@@ -273,8 +273,8 @@ function openWindowEmail(){
   var mailto='mailto:pedro.oct.costa@gmail.com';
   var sub = document.getElementById("subject").value;
   var body = document.getElementById("bodyMsg").value;
-  if (sessionStorage.getItem("id") !== null){
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+sessionStorage.getItem("id")+'&clickemail=1', {
+  if (localStorage.getItem("id") !== null){
+    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id")+'&clickemail=1', {
     })
   }
   if(sub && body)
