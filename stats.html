@@ -90,7 +90,6 @@ function statsIO(){
   if (localStorage.getItem("id") !== null){
     axios.get('https://trackio.000webhostapp.com/statsio.php?session='+localStorage.getItem("id")+'&stats=1')
       .then(function(response){
-        console.log(response["data"])
         var country={}
         var ipversion={ipv4:0,ipv6:0};
         for (i=0;i< response["data"].length;i++){
@@ -100,12 +99,11 @@ function statsIO(){
           else{
             ipversion["ipv6"]=ipversion["ipv6"]+1;
           }
-          console.log(response[i]["country"]);
-          if (response["data"][i]["country"] in country){
-            country[response["data"][i]["country"]]=country[response["data"][i]["country"]]+1;
+          if (response["data"][i].country in country){
+            country[response["data"][i].country]=country[response["data"][i].country]+1;
           }
           else{
-            country[response["data"][i]["country"]]=1
+            country[response["data"][i].country]=1
           }
         }
         ipvData(ipversion);
