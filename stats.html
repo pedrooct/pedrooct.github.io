@@ -36,6 +36,7 @@
       <h2>Stats about this page</h2>
     </header>
     <main role="main" class="inner cover">
+      <h2>Colours are random generated so it's unique for you!</h2>
       <div  id="waiting" class="loader"></div>
       <canvas id="barchartipv" style="display:none;margin-top:50px; width:100%; height:100% "></canvas>
       <canvas id="peichartcountry" style="display:none;margin-top:50px; width:100%; height:100% "></canvas>
@@ -54,6 +55,10 @@ function countryPieMap(dataE){
     data[counter]=dataE[key]
     counter++;
   }
+  colours=[]
+  for(i=0;i<counter;i++){
+    colours[i]='rgb('+Math.floor((Math.random() * 255) + 1)+","+Math.floor((Math.random() * 255) + 1)+","+Math.floor((Math.random() * 255) + 1)+")";
+  }
   var ctx = document.getElementById('peichartcountry').getContext('2d');
   var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
@@ -61,7 +66,7 @@ function countryPieMap(dataE){
         labels: labels,
         datasets: [{
             label: 'Countries reached',
-            backgroundColor: 'rgb(0, 0, 255)',
+            backgroundColor:colours,
             data: data
         }]
     },
@@ -71,6 +76,10 @@ function countryPieMap(dataE){
 }
 
 function ipvData(data){
+  colours=[]
+  for(i=0;i<2;i++){
+    colours[i]='rgb('+Math.floor((Math.random() * 255) + 1)+","+Math.floor((Math.random() * 255) + 1)+","+Math.floor((Math.random() * 255) + 1)+")";
+  }
   var ctx = document.getElementById('barchartipv').getContext('2d');
   var myBarChart = new Chart(ctx, {
     type: 'horizontalBar',
@@ -78,7 +87,7 @@ function ipvData(data){
         labels: ['ipv4', 'ipv6'],
         datasets: [{
             label: 'ip version',
-            backgroundColor:['rgb(0, 0, 255)','rgb(255,0,0)'],
+            backgroundColor:colours,
             data: [data["ipv4"],data["ipv6"]]
         }]
     },
@@ -87,6 +96,10 @@ function ipvData(data){
 
 }
 function clickGraph(data){
+  colours=[]
+  for(i=0;i<4;i++){
+    colours[i]='rgb('+Math.floor((Math.random() * 255) + 1)+","+Math.floor((Math.random() * 255) + 1)+","+Math.floor((Math.random() * 255) + 1)+")";
+  }
   var ctx = document.getElementById('barchartclicks').getContext('2d');
   var myBarChart = new Chart(ctx, {
     type: 'horizontalBar',
@@ -94,7 +107,7 @@ function clickGraph(data){
         labels: ['clickprojects', 'clicklinkedin',"clickemail","clickstats"],
         datasets: [{
             label: 'What the user check in the page!',
-            backgroundColor:['rgb(0, 0, 255)','rgb(255,0,0)',"rgb(0,255,0)","rgb(255,255,0)"],
+            backgroundColor:colours,
             data: [data["clickprojects"],data["clicklinkedin"],data["clickemail"],data["clickstats"]]
         }]
     },
