@@ -90,10 +90,10 @@ function statsIO(){
   if (localStorage.getItem("id") !== null){
     axios.get('https://trackio.000webhostapp.com/statsio.php?session='+localStorage.getItem("id")+'&stats=1')
       .then(function(response){
-        console.log(response.data)
+        console.log(response["data"])
         var country={}
         var ipversion={ipv4:0,ipv6:0};
-        for (i=0;i< response.data.length;i++){
+        for (i=0;i< response["data"].length;i++){
           if(response[i]["ip"].split(":").length>1){
             ipversion["ipv4"]=ipversion["ipv4"]+1;
           }
