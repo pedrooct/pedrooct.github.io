@@ -60,7 +60,6 @@ function countryPieMap(dataE){
         labels: labels,
         datasets: [{
             label: 'ip version',
-            backgroundColor: 'rgb(255, 99, 132)',
             data: data
         }]
     },
@@ -93,7 +92,7 @@ function statsIO(){
         var country={}
         var ipversion={ipv4:0,ipv6:0};
         for (i=0;i< response["data"].length;i++){
-          if(response["data"][i].ip.split(":").length>1){
+          if(response["data"][i].ip.split(".").length>1){
             ipversion["ipv4"]=ipversion["ipv4"]+1;
           }
           else{
