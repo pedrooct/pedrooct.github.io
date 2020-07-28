@@ -50,11 +50,7 @@
         <img id="profile" src=""style="border-radius: 50%; display: none;" width="200px" height="200px">
       </div>
       <h1 id="summary" class="cover-heading"style="margin-top:10%">Pedro Oct. Costa</h1>
-      <p class="lead">
-        HI ! i'm a mobile computing master student researching computer vision in fog computing and IoT scenarios, and here you can learn more about me.
-        I graduate university (computer engineering) in 2018 and i been coding since my 16, i'm 23 by the way :)
-        I love LINUX , low level programming, networks and hardware ! If you keep scrolling you can learn even more !!!
-      </p>
+      <p id="textP" class="lead"></p>
       <p class="lead">
         Also i love clean and straight to the point websites.
       </p>
@@ -336,6 +332,11 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+var d = new Date();
+var n = d.getFullYear();
+n=Number(n)-1996;
+console.log(n);
+document.getElementById("textP").innerText="  HI ! i'm a mobile computing master student researching computer vision in fog computing and IoT scenarios, and here you can learn more about me.I graduate university (computer engineering) in 2018 and i been coding since my 16, i'm "+ n.toString() +" by the way :)I love LINUX , low level programming, networks and hardware ! If you keep scrolling you can learn even more !!!";
 trackIO();
 presentGitInfo();
 </script>
