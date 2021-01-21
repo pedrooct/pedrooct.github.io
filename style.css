@@ -69,6 +69,10 @@ Containers
   margin: 0 auto;
   max-width: 996px;
 }
+.containerTimeline{
+    margin: 0 auto;
+      max-width: 80%;
+}
 
 /* ========================
 Navigation
