@@ -5,125 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="generator" content="Jekyll v3.8.5">
   <link rel="icon" href="./favicon.png">
-  <title>Welcome to my page</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <style>
-  .bd-placeholder-img {
-    font-size: 1.125rem;
-    text-anchor: middle;
-  }
-
-  @media (min-width: 768px) {
-    .bd-placeholder-img-lg {
-      font-size: 3.5rem;
-    }
-  }
-  </style>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <title>Welcome to my page</title>
   <link href="style.css" rel="stylesheet">
 </head>
-<body class="text-center">
-  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-    <header class="masthead mb-auto">
-      <div class="inner">
-        <h3 class="masthead-brand">
-          <button  class="btn" onclick="trackIOlinkedinclick()" >
-            <img border="0" alt="Linkedin" src="./img/LinkedIn-Icon-Dark.png" width="50" height="50">
-          </button>
-        </h3>
-        <nav class="nav nav-masthead justify-content-center">
-          <a class="nav-link active" href="#home">Home</a>
-          <a class="nav-link"  href="#projects">projects</a>
-          <a class="nav-link" href="#papers">Papers</a>
-          <a class="nav-link" href="#education">Education</a>
-          <a class="nav-link" href="./stats.html">Stats</a>
-          <a class="nav-link" href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>
+<body>
+  <script type="">
+      ////////////////////////////////////
+    // NAVIGATION SHOW/HIDE
 
-    <main role="main" class="inner cover">
-      <div style="margin-top:10%" class="text-center">
-        <img id="profile" src=""style="border-radius: 50%; display: none;" width="200px" height="200px">
-      </div>
-      <h1 id="summary" class="cover-heading"style="margin-top:10%">Pedro Oct. Costa</h1>
-      <p id="textP" class="lead"></p>
-      <p class="lead">
-        Also i love clean and straight to the point websites.
-      </p>
-      <p class="lead">PS: This site collects some information for analysis.(Don't worry is nothing much ;))</p>
-      <h2>Favorite languages</h2>
-      <p class="lead"> C, rust , golang , python, php </p>
-      <h2>Favorite Subject</h2>
-      <p class="lead"> Computer Networks , fog computing , IOT </p>
-      <h2 id="projects" class="cover-heading" style="margin-top:10%"><b>Projects</b></h2>
-      <div id="loader" class="loader"></div>
-      <div id="card">
-        <div class="card-deck">
-          <div class="card">
-            <div class="card-body">
-              <h4 id="title0" class="card-title"></h4>
-              <h6 id="subtitle0"class="card-subtitle mb-2 text-muted"></h6>
-              <p id="text0" class="card-text"></p>
-              <a id="link0" href="" class="card-link">Check out github</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4 id="title1" class="card-title"></h4>
-              <h6 id="subtitle1" class="card-subtitle mb-2 text-muted"></h6>
-              <p id="text1" class="card-text"></p>
-              <a id="link1" href="" class="card-link"> Check out github</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-deck" style="margin-top:10%">
-          <div class="card">
-            <div class="card-body">
-              <h4 id="title2" class="card-title"></h4>
-              <h6 id="subtitle2" class="card-subtitle mb-2 text-muted"></h6>
-              <p id="text2" class="card-text"></p>
-              <a id="link2" href="" class="card-link"> Check out github</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4 id="title3" class="card-title"></h4>
-              <h6 id="subtitle3" class="card-subtitle mb-2 text-muted"></h6>
-              <p id="text3" class="card-text"></p>
-              <a id="link3" href="" class="card-link"> Check out github</a>
-            </div>
-          </div>
-        </div>
-        <div class="card-deck" style="margin-top:10%">
-          <div class="card">
-            <div class="card-body">
-              <h4 id="title4" class="card-title"></h4>
-              <h6 id="subtitle4" class="card-subtitle mb-2 text-muted"></h6>
-              <p id="text4" class="card-text"></p>
-              <a id="link4" href="" class="card-link"> Check out github</a>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body">
-              <h4 id="title5" class="card-title"></h4>
-              <h6 id="subtitle5" class="card-subtitle mb-2 text-muted"></h6>
-              <p id="text5" class="card-text"></p>
-              <a id="link5" href="" class="card-link"> Check out github</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div style="margin-top:10%">
-        <p class="lead">
-          <button onclick="trackIOprojectclick()" class="btn btn-lg btn-secondary">Check my others projects</button>
-        </p>
-      </div>
-        <h2 id="papers" class="cover-heading" style="margin-top:10%"><b>Papers</b></h2>
-        <h2 id="papertimer">
+    $("nav ul").hide();
+
+    $(".nav-toggle").click( function() {
+    $("nav ul").slideToggle("medium");
+    });
+
+    $("nav ul li a, .brand a").click( function() {
+    $("nav ul").hide();
+    });
+
+    ////////////////////////////////////
+    // SMOOTH SCROLLING WITH NAV HEIGHT OFFSET
+
+    $(function() {
+    var navHeight = $("nav").outerHeight();
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top - navHeight
+          }, 1000);
+          return false;
+        }
+      }
+    });
+    });
+
+    ////////////////////////////////////
+    // NAVIGATION STICKY
+
+    var viewHeight = $(window).height();
+    var navigation = $('nav');
+
+    $(window).scroll( function() {
+    if ( $(window).scrollTop() > (viewHeight - 175) ) { //edit for nav height
+      navigation.addClass('sticky');
+    } else {
+      navigation.removeClass('sticky');
+    }
+    });
+
+    ////////////////////////////////////////////////
+    // MAKE THE SPLASH CONTAINER VERTICALLY CENTERED
+
+    function centerSplash() {
+    var navHeight = $("nav").outerHeight();
+    var splashHeight = $(".splash .container").height();
+    var remainingHeight = $(window).height() - splashHeight - navHeight;
+    $(".splash .container").css({"padding-top" : remainingHeight/2, "padding-bottom" : remainingHeight/2});
+    }
+
+    $( document ).ready( function() {
+    centerSplash();
+    });
+
+    $( window ).resize( function() {
+    centerSplash();
+    });
+  </script>
+  <nav class="container-fluid nav">
+  <div class="container cf">
+    <div class="brand">
+      <a href="https://www.linkedin.com/in/pedro-oct-costa-3440ba186/">Linkedin</a>
+    </div>
+    <i class="fa fa-bars nav-toggle"></i>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certification">Certifications</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#timeline">Professional and educational path</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid splash" id="splash">
+  <div class="container">
+    <h1>Pedro Oct. Costa</h1>
+    <span class="lead">IoT engineer</span>
+    <span class="continue"><a href="#about"><i class="fa fa-angle-down"></i></a></span>
+  </div>
+</div>
+
+<div class="container-fluid intro" id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p id="textP"></p>
+  </div>
+</div>
+
+<div class="container-fluid features" id="skills">
+  <div class="container cf">
+    <h2>Skills</h2>
+    <div class="col-3">
+      <h3>IoT</h3>
+      <p>Working with IoT for about 3 years. The first two were focus the Hardware and networking aspect of IoT. Now i'm currently working with the server and architecture side.</p>
+    </div>
+    <div class="col-3">
+      <h3>Cloud Computing</h3>
+      <p>Have working experience with Microsoft Azure services.</p>
+    </div>
+    <div class="col-3">
+      <img src="https://s22.postimg.org/citwksa01/icon_graph.png" alt="">
+      <h3>Networking and protocols</h3>
+      <p>Networking was always a passion of mine, and i had the opportunity of working with it since IoT depends a lot on good decision at the network level.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid portfolio" id="articles">
+  <div class="container cf">
+    <h2>Articles published</h2>
+    <h2 id="papertimer">
           Fog Computing in Real Time Resource Limited IoT Environments
         </h2>
         <h5>
@@ -135,210 +144,130 @@
         <h5>
           <a href="https://doi.org/10.1007/978-3-030-45691-7_11"> check paper </a>
         </h5>
-      <h2 id="education" class="cover-heading" style="margin-top:10%"><b>My journey... so far !</b></h2>
-      <div class="container">
-        <div class="page-header">
-          <h3 id="timeline">Timeline</h3>
-        </div>
-        <ul class="timeline">
-          <li class="timeline-inverted">
-            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">2020/- It People Innovation</h4>
+</div>
+</div>
+<div class="container-fluid portfolio" id="certification">
+  <div class="container cf">
+    <h2>Certifications</h2>
+    <h2>ThingWorx Fundamentals Certification 2020</h2>
+    <h5><a href="https://www.youracclaim.com/badges/eed8fd68-9d03-4fde-bf88-4cb4dbf018cf/public_url"> Check info </a></h5>
+</div>
+</div>
+
+<div class="containerTimeline" id="timeline">
+    	<div class="row">
+			<div class="col-md-12">
+				<div class="page-header">
+				</div>
+				<div style="display:inline-block;width:100%;overflow-y:auto;">
+				<ul class="timeline timeline-horizontal">
+					<li class="timeline-item">
+					<div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
+						<div class="timeline-panel">
+							<div class="timeline-heading">
+								<h4 class="timeline-title">CET in network management and computer systems</h4>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2014/2015</small></p>
+								</div>
+								<div class="timeline-body">
+									<p>This was a one year course to expand my knowledge before going to university.</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-item">
+							<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4 class="timeline-title">Internship Android developer</h4>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2015</small></p>
+								</div>
+								<div class="timeline-body">
+									<p>This project consisted of a geo locator that allowed law enforcement to map streets or zones where crime could be more active.
+                    Worked with mysql, php, android and OSM api.
+                  </p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-item">
+							<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4 class="timeline-title">Degree in computer engineering</h4>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2015/2018</small></p>
+								</div>
+								<div class="timeline-body">
+									<a href="https://www.ufp.pt/inicio/estudar-e-investigar/licenciaturas/engenharia-informatica/" class="card-link">Check sylabus</a>
+								</div>
+							</div>
+						</li>
+            <li class="timeline-item">
+							<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4 class="timeline-title">R&D at Hardlevel</h4>
+									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2018/2020</small></p>
+								</div>
+								<div class="timeline-body">
+                  <p>IoT engineer and research in renewable energy techonlogies.
+								</div>
+							</div>
+						</li>
+            <li class="timeline-item">
+              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">Pos-graduation in IoT and mobile computing</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2019/2020</small></p>
+                </div>
+                <div class="timeline-body">
+                  <a href="https://www.ufp.pt/inicio/estudar-e-investigar/mestrados/engenharia-informatica/" class="card-link">Check sylabus</a>
+                </div>
               </div>
-              <div class="timeline-body">
-                <p>Working at celfocus on Consumer IoT</p>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  <h4 class="timeline-title">ITPeople IoT engineer</h4>
+                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2020/-</small></p>
+                </div>
+                <div class="timeline-body">
+                  <p>Currently working as an IoT engineer at Celfocus. Developing and studying Cloud solutions for IoT.</p>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">2018/2020 Hardlevel-Energias Renovaveis, LDA </h4>
-              </div>
-              <div class="timeline-body">
-                <p>IoT Researcher and engineer</p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">2018/- master student in mobile computing</h4>
-              </div>
-              <div class="timeline-body">
-                <a href="https://www.ufp.pt/inicio/estudar-e-investigar/mestrados/engenharia-informatica/" class="card-link">Check sylabus</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">2018 Degree in computer engineering</h4>
-              </div>
-              <div class="timeline-body">
-                <p>From 2015 to 2018</p>
-                <a href="https://www.ufp.pt/inicio/estudar-e-investigar/licenciaturas/engenharia-informatica/" class="card-link">Check sylabus</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">Internship Android developer</h4>
-              </div>
-              <div class="timeline-body">
-                <p>2015 - i was a android developer , worked with java mysql , php and osm map.
-                  This project consisted of a geo locator that allowed law enforcement to map streets or zones where crime could be more active.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="timeline-inverted">
-            <div class="timeline-badge success"><i class="glyphicon glyphicon-thumbs-up"></i></div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4 class="timeline-title">2014/2015 CET in network management and computer systems</h4>
-              </div>
-              <div class="timeline-body">
-                <p>This was a one year course to expand my knowledge before going to university</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <h2 id="contact" class="cover-heading" style="margin-top:10%"><b>Contact me</b></h2>
-      <form>
-        <div class="form-group">
-          <input type="text" class="form-control-css" id="subject" placeholder="Subject" style="margin-top:3%">
-        </div>
-        <div class="form-group">
-          <textarea class="form-control-css" id="bodyMsg" placeholder="Body of the message" style="margin-top:3%" rows="3"></textarea>
-        </div>
-        <p class="lead" style="margin-top:5%">
-          <button type="button" onclick="openWindowEmail()" class="btn btn-lg btn-secondary">Send me a email</button>
-        </p>
-      </form>
-    </main>
+            </li>
+					</ul>
+				</div>
+				</div>
+			</div>
+
+
+
+
+<div class="container-fluid contact" id="contact">
+  <div class="container">
+    <form>
+      <h2>Contact Me</h2>
+        <p>Please use Linkedin, thank you.<p>
+    </form>
   </div>
-  <script>
-  $(document).ready(function(){
-    $('.timeline').slideDown(4000);
-    $('.lead').slideDown(4000);
-    $('#profile').slideDown(1000);
-  });
-</script>
+</div>
+
+<footer class="container-fluid footer">
+</footer>
 <script type="text/javascript">
-function trackIOlinkedinclick(){
-  if (localStorage.getItem("id") !== null){
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id")+'&clicklinkedin=1', {
-    })
-  }
-  window.open("https://www.linkedin.com/in/pedro-oct-costa-3440ba186/");
-}
-function trackIOprojectclick(){
-  if (localStorage.getItem("id") !== null){
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id")+'&clickprojects=1', {
-    })
-  }
-  window.open("https://github.com/pedrooct");
-}
-function random(){
-  key="";
-  for (i=0;i< 20;i++){
-    aux=Math.floor(Math.random() * 100) + 1;
-    key=key+ aux.toString();
-  }
-  return key;
-}
-function trackIO(){
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.getItem("id") === null){
-      localStorage.setItem("id",random());
-    }
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id"), {
-    })
-  }
-}
-function getImage(){
-  return axios.get("https://api.github.com/users/pedrooct");
-}
-function listProjects(){
-  return axios.get("https://api.github.com/users/pedrooct/repos?sort=pushed&type=owner");
-}
-function presentGitInfo(){
-  document.getElementById('card').style.visibility="hidden";
-  document.getElementById('loader').style.display="block";
-  axios.all([getImage(), listProjects()])
-  .then(axios.spread(function (Img, projects) {
-    document.getElementById("profile").src = Img.data.avatar_url;
-    document.getElementById('profile').style.visibility="visible";
-    for (let i =0; i<6 ;i++){
-      document.getElementById("title"+i).innerHTML=projects.data[i].name;
-      document.getElementById("subtitle"+i).innerHTML="Application built in "+projects.data[i].language;
-      document.getElementById("text"+i).innerHTML=projects.data[i].description;
-      document.getElementById("link"+i).setAttribute("href",projects.data[i].html_url);
-    }
-    document.getElementById('loader').style.display="none";
-    document.getElementById('card').style.visibility="visible";
-    document.getElementById('profile').style.display="Inline";
-  }));
-}
-function openWindowEmail(){
-  var mailto='mailto:pedro.oct.costa@gmail.com';
-  var sub = document.getElementById("subject").value;
-  var body = document.getElementById("bodyMsg").value;
-  if (localStorage.getItem("id") !== null){
-    axios.get('https://trackio.000webhostapp.com/trackIO.php?session='+localStorage.getItem("id")+'&clickemail=1', {
-    })
-  }
-  if(sub && body)
-  {
-    sub =sub.replace(" ", "%20");
-    body= body.replace(" ","%20");
-    window.open(mailto+"?subject="+sub+"&body="+body);
-  }
-  else {
-    window.open(mailto);
-  }
-}
-window.onscroll = function() {scrollFunction()};
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("myBtn").style.display = "block";
-  } else {
-    document.getElementById("myBtn").style.display = "none";
-  }
-}
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
+
 var d = new Date();
 var n = d.getFullYear();
 n=Number(n)-1996;
 console.log(n);
-document.getElementById("textP").innerText="  HI ! i'm a mobile computing master student researching computer vision in fog computing and IoT scenarios, and here you can learn more about me.I graduate university (computer engineering) in 2018 and i been coding since my 16, i'm "+ n.toString() +" by the way :)I love LINUX , low level programming, networks and hardware ! If you keep scrolling you can learn even more !!!";
-trackIO();
-presentGitInfo();
+document.getElementById("textP").innerText="  Hi! I'm currenlty working as an IoT engineer, helping develop solution and architecture to support the devices on the field.\n I graduate university (computer engineering) in 2018, later i took a pos-graduate in IoT and mobile computing, researching on fog computing architecture. More personally i been coding since my 16, i'm "+ n.toString() +" by the way !\n I love LINUX , low level programming, networks and hardware!";
+
+</script>
+</body>
+</html>
+
 </script>
 </body>
 </html>
