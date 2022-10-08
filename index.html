@@ -1,328 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-<title>Joaninha voa voa terapia da fala</title>
+<title>Pedro Oct. Costa</title>
 <link rel="icon" type="image/x-icon" href="">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
-<body style="background:#f6a5a4;">
-
-
+<body>
 <div class="header">
   <h2 style="font-family: Sofia; margin-bottom:0px">Pedro Oct. Costa</h2>
-  <h6 style="margin-top:0px">DevOps/IoT engineer</h6>
+  <h6 style="margin-top:0px">DevOps/IoT engineer 🧑‍🔬</h6>
 </div>
 <div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h1 style="font-family: Sofia;">About me 🧑‍💻</h1>
+      <h2 id="textP"></h2>
+    </div>
+  </div>
   <div class="rightcolumn">
     
     <div class="card">
-      <h1 style="font-family: Sofia;">About me</h1>
-      <h2 id="textP"></h2>
-      <h3>Redes sociais</h3>
-      <a href="https://www.instagram.com/tfjoaninhavoavoa/" target="_blank"><img src="imgs/instagram-png-instagram-logo-512-150x150_resize.jpg" alt="Instgram logo" style="width:40;height:40px"></a>
+      <h3>Socials</h3>
+      <a href="https://www.linkedin.com/in/pedro-oct-costa/" target="_blank"><img src="img/LinkedIn-Icon-Dark.png" alt="LinkedIn logo" style="width:40;height:40px"></a>
+      <a href="https://github.com/pedrooct" target="_blank"><img src="img/GitHub.png" alt="github logo" style="width:40;height:40px"></a>
     </div>
     <div class="card">
-      <h2>Articles</h2>
-      <h2>
-        Fog Computing in Real Time Resource Limited IoT Environments
-      </h2>
-      <h5>
-        <a href="https://doi.org/10.1007/978-3-030-45691-7_10"> check paper </a>
-      </h5>
-      <h2>
-        A Power Efficient IoT Edge Computing Solution for Cooking Oil Recycling
-      </h2>
-      <h5>
-        <a href="https://doi.org/10.1007/978-3-030-45691-7_11"> check paper </a>
-      </h5>
+      <h2>Articles📚</h2>
+      <h3><a href="https://doi.org/10.1007/978-3-030-45691-7_10">Fog Computing in Real Time Resource Limited IoT Environments</a></h3>
+      <h3><a href="https://doi.org/10.1007/978-3-030-45691-7_11">A Power Efficient IoT Edge Computing Solution for Cooking Oil Recycling</a></h3>
+    </div>
+    <div class="card">
+      <h2>Academic Background🎓</h2> 
+      <h3>2014/2015 -> CET in network management and computer systems<h3>
+      <h3>2015/2018 -> Degree in computer engineering UFP<h3>
+      <h3>2018/2020 -> ISUS/Hardlevel researcher on IoT and fog computing</h3>
+    </div>
+    <div class="card">
+      <h2>Certifications📜</h2>
+      <h3><a href="https://www.credly.com/badges/eed8fd68-9d03-4fde-bf88-4cb4dbf018cf/public_url" target="_blank">ThingWorx Fundamentals Certification 2020</a></h3>
+      <h3><a href="https://www.credly.com/badges/fdcb4520-e5f3-4e5e-9751-8ff6e0345577/public_url" target="_blank"> ThingWorx Professional Certification 2021</a></h3>
     </div>
 </div>
 
-</body>
-</html>
 
-
-
-
-
-
-
-
-<!doctype html>
-<html lang="pt">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="generator" content="Jekyll v3.8.5">
-  <link rel="icon" href="./favicon.png">
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <title>Welcome to my page</title>
-  <link href="style.css" rel="stylesheet">
-</head>
-<body>
-  <script type="">
-      ////////////////////////////////////
-    // NAVIGATION SHOW/HIDE
-
-    $("nav ul").hide();
-
-    $(".nav-toggle").click( function() {
-    $("nav ul").slideToggle("medium");
-    });
-
-    $("nav ul li a, .brand a").click( function() {
-    $("nav ul").hide();
-    });
-
-    ////////////////////////////////////
-    // SMOOTH SCROLLING WITH NAV HEIGHT OFFSET
-
-    $(function() {
-    var navHeight = $("nav").outerHeight();
-    $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top - navHeight
-          }, 1000);
-          return false;
-        }
-      }
-    });
-    });
-
-    ////////////////////////////////////
-    // NAVIGATION STICKY
-
-    var viewHeight = $(window).height();
-    var navigation = $('nav');
-
-    $(window).scroll( function() {
-    if ( $(window).scrollTop() > (viewHeight - 175) ) { //edit for nav height
-      navigation.addClass('sticky');
-    } else {
-      navigation.removeClass('sticky');
-    }
-    });
-
-    ////////////////////////////////////////////////
-    // MAKE THE SPLASH CONTAINER VERTICALLY CENTERED
-
-    function centerSplash() {
-    var navHeight = $("nav").outerHeight();
-    var splashHeight = $(".splash .container").height();
-    var remainingHeight = $(window).height() - splashHeight - navHeight;
-    $(".splash .container").css({"padding-top" : remainingHeight/2, "padding-bottom" : remainingHeight/2});
-    }
-
-    $( document ).ready( function() {
-    centerSplash();
-    });
-
-    $( window ).resize( function() {
-    centerSplash();
-    });
-  </script>
-  <nav class="container-fluid nav">
-  <div class="container cf">
-    <div class="brand">
-      <a href="https://github.com/pedrooct">Github</a>
-    </div>
-    <i class="fa fa-bars nav-toggle"></i>
-    <ul>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#articles">Papers</a></li>
-      <li><a href="#certification">Certifications</a></li>
-      <li><a href="#timeline">Professional and educational path</a></li>
-      <li><a href="https://www.linkedin.com/in/pedro-oct-costa-3440ba186/">Linkedin</a></li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container-fluid splash" id="splash">
-  <div class="container">
-    <h1>Pedro Oct. Costa</h1>
-    <span class="lead">IoT/DevOps engineer</span>
-
-  </div>
-</div>
-
-<div class="container-fluid intro" id="about">
-  <div class="container">
-    <h2>About Me</h2>
-    <p id="textP"></p>
-  </div>
-</div>
-
-<div class="container-fluid features" id="skills">
-  <div class="container cf">
-    <h2>Skills</h2>
-    <div class="col-3">
-      <h3>IoT</h3>
-      <p>Working with IoT for about 3 years. The first two were focus the Hardware and networking aspect of IoT. Now i'm currently working with the server and architecture side.</p>
-    </div>
-    <div class="col-3">
-      <h3>DevOps</h3>
-      <p>Experience developing CI/CD pipelines with jenkins, ansible and gitlab.</p>
-    </div>
-    <div class="col-3">
-      <h3>Networking and protocols</h3>
-      <p>Networking was always a passion of mine, and i had the opportunity of working with it since IoT depends a lot on good decision at the network level.</p>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid portfolio" id="articles">
-  <div class="container cf">
-    <h2>Papers</h2>
-    <h2 id="papertimer">
-          Fog Computing in Real Time Resource Limited IoT Environments
-        </h2>
-        <h5>
-          <a href="https://doi.org/10.1007/978-3-030-45691-7_10"> check paper </a>
-        </h5>
-        <h2 id="papertimer">
-          A Power Efficient IoT Edge Computing Solution for Cooking Oil Recycling
-        </h2>
-        <h5>
-          <a href="https://doi.org/10.1007/978-3-030-45691-7_11"> check paper </a>
-        </h5>
-</div>
-</div>
-<div class="container-fluid portfolio" id="certification">
-  <div class="container cf">
-    <h2>Certifications</h2>
-    <h2>ThingWorx Fundamentals Certification 2020</h2>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="eed8fd68-9d03-4fde-bf88-4cb4dbf018cf" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
-    <h2>ThingWorx Professional Certification 2021</h2>
-    <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fdcb4520-e5f3-4e5e-9751-8ff6e0345577" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>	
-</div>
-</div>
-
-<div class="containerTimeline" id="timeline">
-    	<div class="row">
-			<div class="col-md-12">
-				<div class="page-header">
-				</div>
-				<div style="display:inline-block;width:100%;overflow-y:auto;">
-				<ul class="timeline timeline-horizontal">
-					<li class="timeline-item">
-					<div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
-						<div class="timeline-panel">
-							<div class="timeline-heading">
-								<h4 class="timeline-title">CET in network management and computer systems</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 2014/2015</small></p>
-								</div>
-								<div class="timeline-body">
-									<p>This was a one year course to expand my knowledge before going to university.</p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-item">
-							<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4 class="timeline-title">Internship Android developer</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2015</small></p>
-								</div>
-								<div class="timeline-body">
-									<p>This project consisted of a geo locator that allowed law enforcement to map streets or zones where crime could be more active.
-                    Worked with mysql, php, android and OSM api.
-                  </p>
-								</div>
-							</div>
-						</li>
-						<li class="timeline-item">
-							<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4 class="timeline-title">Degree in computer engineering</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2015/2018</small></p>
-								</div>
-								<div class="timeline-body">
-									<a href="https://www.ufp.pt/inicio/estudar-e-investigar/licenciaturas/engenharia-informatica/" class="card-link">Check sylabus</a>
-								</div>
-							</div>
-						</li>
-            <li class="timeline-item">
-							<div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h4 class="timeline-title">R&D at Hardlevel</h4>
-									<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2018/2020</small></p>
-								</div>
-								<div class="timeline-body">
-                  <p>IoT engineer and research in renewable energy techonlogies.
-								</div>
-							</div>
-						</li>
-            <li class="timeline-item">
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Not finished master degree in IoT and mobile computing</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>2019/2020</small></p>
-                </div>
-                <div class="timeline-body">
-                  <a href="https://www.ufp.pt/inicio/estudar-e-investigar/mestrados/engenharia-informatica/" class="card-link">Check sylabus</a>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">ITPeople IoT engineer</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>jul 2020/2021</small></p>
-                </div>
-                <div class="timeline-body">
-                  <p> IoT engineer at Celfocus. Developing and researching Cloud solutions for IoT.</p>
-                </div>
-              </div>
-            </li>
-		<li class="timeline-item">
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Celfocus IoT engineer</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>jul 2021/-</small></p>
-                </div>
-                <div class="timeline-body">
-                  <p>Currently working as an IoT, devops and system integration engineer at vodafone system team, on IITC product. A lot jenkins, ansible, loki and prometheus </p>
-                </div>
-              </div>
-            </li>
-					</ul>
-				</div>
-				</div>
-			</div>
-
-
-
-<footer class="container-fluid footer">
-</footer>
 <script type="text/javascript">
-
-
 
 var d = new Date();
 var n = d.getFullYear();
 n=Number(n)-1996;
-document.getElementById("textP").innerText="  Hi! I'm currently working as an IoT/devops engineer, helping develop solution and architecture to support the devices on the field.\n I graduate university (computer engineering) in 2018, later I took went to a master degree in IoT and mobile computing(not finished), researching on fog computing architecture. More personally I been coding since my 16, i'm "+ n.toString() +" by the way !\n I love LINUX , low level programming, networks and hardware!";
+document.getElementById("textP").innerText="Hi! I'm currently working as an Monitoring/automation/CICD engineer for vodafone, developing solutions to support the one of the biggest IoT projects in the world.\n I graduated university (computer engineering) in 2018, later I took a master degree in IoT and mobile computing(not finished), researching on fog computing architecture. I'm "+ n.toString() +" years and I have been coding since 16, starting with C and Java!\n I love🧡 LINUX, programming, Observalibity and CI/CD!\n This page acts as a blog so, bookmark it, posts coming soon!!";
 
 </script>
-</body>
-</html>
 
-</script>
 </body>
 </html>

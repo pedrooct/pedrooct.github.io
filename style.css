@@ -3,20 +3,14 @@
   box-sizing: border-box;
 }
 
-.backofficebody{
-  background-image: url('imgs/background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+body{
+  background-color: grey;
 }
 
 .header {
   padding: 30px;
   font-size: 40px;
   text-align: center;
-  background-image: url('imgs/banner.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 50%;
 }
 
 .leftcolumn {   
